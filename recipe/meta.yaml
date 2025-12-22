@@ -41,8 +41,7 @@ requirements:
     - r-base
   run:
     - r-base
-  run_constrained:
-    - r-spam =={{ version|replace("-", "_") }}
+    - r-spam
 
 test:
   requires:
