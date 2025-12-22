@@ -12,7 +12,7 @@ source:
   sha256: 969a003edd72a048b08e8f22ca173f3a80560b3a777470562111ac2ec297674d
 
 build:
-  number: 1
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
@@ -41,8 +41,7 @@ requirements:
     - r-base
   run:
     - r-base
-  run_constrained:
-    - r-spam =={{ version|replace("-", "_") }}
+    - r-spam
 
 test:
   requires:
