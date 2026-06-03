@@ -1,4 +1,4 @@
-{% set version = '2.10-0' %}
+{% set version = "2.11-4" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/spam64_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/spam64/spam64_{{ version }}.tar.gz
-  sha256: 969a003edd72a048b08e8f22ca173f3a80560b3a777470562111ac2ec297674d
+  sha256: 83c98b35bad1c05b46fbfb513b2078cc3e80a66103a831c872d3bf8d7d60f032
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -55,10 +55,8 @@ test:
 about:
   home: https://git.math.uzh.ch/reinhard.furrer/spam
   license: LGPL-2.0-only OR BSD-3-Clause
-  summary: Provides the Fortran code of the R package 'spam' with 64-bit integers. Loading this
-    package together with the R package spam enables the sparse matrix class spam to
-    handle huge sparse matrices with more than 2^31-1 non-zero elements. Documentation
-    is provided in Gerber, Moesinger and Furrer (2017) <doi:10.1016/j.cageo.2016.11.015>.
+  summary: Provides the Fortran code of the R package 'spam' with 64-bit integers. Loading this package together with the R package spam enables the sparse matrix class spam to handle huge sparse matrices with more than 2^31-1 non-zero elements. Documentation is provided in Gerber, Moesinger and Furrer (2017) 
+    <doi:10.1016/j.cageo.2016.11.015>.
   license_family: LGPL
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-2
